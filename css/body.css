@@ -1,0 +1,274 @@
+.body {
+    width: 100%;
+    flex-grow: 1;
+    background-color: rgb(237, 237, 237);
+
+    overflow: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+
+/* msg */
+.body .msg-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    /* overflow: hidden; */
+    min-height: min-content;
+    
+}
+
+.body .msg-list .msg-slice {
+    width: 100%;
+    height: 70px;
+    background-color: white;
+    padding: 8px 10px 8px 10px;
+
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+
+    border-bottom: 1px solid rgb(249, 227, 249);
+
+    cursor: pointer;
+}
+.msg-slice .avator {
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+.msg-slice .avator img {
+    width: 54px;
+    height: 54px;
+    margin-right: 10px;
+
+    border-radius: 10%;
+}
+.redot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    top:6px;
+    right: 10px;
+}
+
+.msg-slice .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    flex-grow: 1;
+
+    overflow: auto;
+    min-height: min-content;
+    text-overflow: ellipsis;
+    min-width: min-content;
+}
+.msg-slice .abstract {
+    overflow: hidden;
+    font-size: 12px;
+}
+.msg-slice .name{
+    font-size: 20px;
+    overflow: hidden;
+}
+
+.msg-slice .time {
+    height: 50px;
+    /* width: 30%; */
+    font-size: 13px;
+    text-align: right;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+.msg-slice .time span {
+    flex-grow: 1;
+}
+.msg-slice .time img {
+    width: 20px;
+    flex-grow: 1;
+}
+
+
+
+/* contact */
+.body .tag {
+    width: 100%;
+    height: 28px;
+    font-size: 16px;
+    padding-left: 10px;
+    border: 1px solid rgb(232, 215, 215);
+}
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    /* overflow: hidden; */
+    min-height: min-content;
+
+    cursor: pointer;
+}
+.contact-slice {
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+
+    height: 70px;
+    padding: 5px;
+
+    background-color: white;
+    border-bottom: 1px solid rgb(232, 215, 215)
+}
+.contact-slice .avator {
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+}
+.contact-list .avator img {
+    width: 50px;
+    border-radius: 10%;
+}
+.contact-slice .name {
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+
+/* Discovery */
+.dis-slice {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: white;
+
+    border-bottom: 1px solid rgb(226, 211, 195);
+}
+.dis-slice:hover {
+    cursor: pointer;
+}
+
+.dis-slice .logo {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dis-slice .logo img {
+    width: 40px;
+    height: 40px;
+}
+.dis-slice .name {
+    flex-grow: 1;
+    font-size: 20px;
+    padding-left: 10px;
+}
+.dis-slice .pointer {
+    width: 10%;
+    text-align: center;
+    font-size: 25px;
+    color: gray;
+}
+
+.gap {
+    width: 100%;
+    height: 15px;
+}
+
+
+/* me  */
+#me .top {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 25px;
+}
+#me .top img {
+    width: 35px;
+}
+#me .video24 {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    color: rgb(148, 148, 148);
+    font-size: 18px;
+}
+
+.personal {
+    width: 100%;
+    height: 100px;
+    background: white;
+}
+.personal .per-content {
+    width: 100%;
+    height: 100px;
+    position: relative;
+    top: -50px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 10px 10px 10px 15px;
+}
+.per-content .avator img{
+    width: 95px;
+    height: 95px;
+    border-radius: 10%;
+}
+
+.personal .per-content .name-id {
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+
+    padding-left: 20px;
+}
+.personal .per-content .name-id .name {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.per-content .pointer {
+    position: relative;
+    top:15px;
+
+    width: 10%;
+    text-align: center;
+    font-size: 25px;
+    color: gray;
+}
+.per-content .pointer img{
+    width: 20px;
+    height: 20px;
+}

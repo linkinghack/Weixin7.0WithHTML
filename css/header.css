@@ -1,0 +1,33 @@
+#header {
+    width: 100%;
+    height: 40px;
+    min-height: 40px;
+    background-color: rgb(237, 237, 237);
+
+    display: flex;
+    justify-content: space-between;
+
+    padding: 0 5px 0 5px;
+
+    color: black;
+}
+
+#header .left {
+    flex-grow: 1;
+    font-size: 20px;
+}
+
+#header .right {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#header .right img {
+    width: 23px;
+    margin: 0 8px 0 8px;
+}
+#header .right img:hover {
+    cursor: pointer;
+}
