@@ -31,3 +31,43 @@
 #header .right img:hover {
     cursor: pointer;
 }
+
+
+/* 加号小工具栏 */
+#plus-tool {
+    position: absolute;
+    top: 80px;
+    right: 12px;
+    width: 45%;
+    height: 200px;
+
+    border-radius: 5px;
+    background-color: rgba(51, 51, 51, 0.95);
+
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+
+}
+
+#plus-tool .tool-item {
+    width: 95%;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+}
+
+#plus-tool img{
+    width: 30px;
+    height: 30px;
+}
+#plus-tool span {
+    flex-grow: 1;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+}

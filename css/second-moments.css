@@ -1,0 +1,188 @@
+#moments {
+    width: 100%;
+    position: absolute;
+    right: -100%;
+    transition: right 0.2s linear;
+}
+
+.moments-top {
+    width: 100%;
+    height: 90px;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 33px;
+    padding-left: 8px;
+    padding-right: 10px;
+    z-index: 99;
+}
+
+.moments-top img{
+    width: 23px;
+}
+.moments-top span {
+    flex-grow: 1;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+/* 朋友圈内容 */
+.moments-container{
+    position: relative;
+    width: 100%;
+    
+    overflow: auto;
+
+    background-color: white;
+}
+
+.moments-container .myzone {
+    width: 100%;
+    height: 275px;
+    background-image: url('../imgs/moments/moments-background.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: center;
+}
+.myzone .namelogo {
+    width: 100%;
+    height: 100px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    position: relative;
+    top: 55px;
+}
+.myzone .namelogo img {
+    width:80px;
+    margin-left: 10px;
+    border-radius: 15%;
+}
+.myzone .namelogo span {
+    font-size: 30px;
+    font-weight: 700;
+    font-family: sans-serif;
+    color: white;
+}
+
+/* 朋友圈动态内容 */
+#moments-slices {
+    width: 100%;
+    margin-top: 45px;
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    position:sticky;
+    top: 150px;
+}
+.moment-slice {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-height: 50px;
+    border-bottom: 1px solid rgb(167, 167, 167);
+    margin-bottom: 12px;
+
+}
+.moment-slice .left-avator {
+    width: 40px;
+    margin-right: 10px;
+}
+.moment-slice .left-avator img {
+    width: 35px;
+    border-radius: 5px;
+}
+
+/* 右侧消息内容 */
+.moment-slice .right-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.moment-slice .right-content .wxname {
+    color: #566a93;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.moment-slice .right-content .slice-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 普通文本类型动态 */
+.moment-slice .right-content .slice-content .text-content {
+    width: 100%;
+    min-height: min-content;
+    font-size: 15px;
+}
+
+/* 点赞按钮和发表时间部分 */
+.moment-slice .right-content .bottom-land{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 12px;
+}
+.moment-slice .right-content .bottom-land img{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+/* 超链接类型动态 */
+.moment-slice .right-content .hyperlink-content {
+    width: 100%;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(247, 247, 247);
+    margin-bottom: 3px;
+
+    cursor: pointer;
+}
+.hyperlink-content img {
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    margin-right: 5px;
+}
+.hyperlink-content p {
+    height: 40px;
+    min-height: 40px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.sticky-container {
+    position: sticky;
+    top: 0;
+
+}
+
+.padding-line {
+    height: 10px;
+    width: 100%;
+}

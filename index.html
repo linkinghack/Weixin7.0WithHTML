@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./css/body.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/second-chat.css">
-
+    <link rel="stylesheet" href="./css/second-moments.css">
     <script src="./js/script.js"></script>
     <title>微信</title>
 </head>
@@ -29,8 +29,8 @@
                 <img id="wifi" src="./imgs/signal/wifi.svg" alt="wifi">
             </div>
 
-            <div id="time">
-                <span>17:00</span>
+            <div id="time" class="time-now">
+                17:00
             </div>
 
             <div class="right">
@@ -42,29 +42,55 @@
         </div>
 
         <div class="container userarea">
+            <!-- 加号小工具栏 -->
+            <ul id="plus-tool">
+                <li class="tool-item">
+                    <img src="./imgs/toolbox/groupchat.svg">
+                    <span>发起群聊</span>
+                </li>
+                <div class="right-line"></div>
+                <li class="tool-item">
+                    <img src="./imgs/toolbox/addFriend-white.svg">
+                    <span>添加朋友</span>
+                </li>
+                <div class="right-line"></div>
+                <li class="tool-item">
+                    <img src="./imgs/toolbox/scan-white.svg">
+                    <span>扫一扫</span>
+                </li>
+                <div class="right-line"></div>
+                <li class="tool-item">
+                    <img src="./imgs/toolbox/payment.svg">
+                    <span>收付款</span>
+                </li>
+                <div class="right-line"></div>
+                <li class="tool-item">
+                    <img src="./imgs/toolbox/help.svg">
+                    <span>帮助与反馈</span>
+                </li>
+            </ul>
 
             <!-- 一级页面 -->
             <!-- 头部 -->
             <div id="header">
                 <div class="left">
-                    <span class="wx">微信</span>
-                    <span id="unread">(99+)</span>
+                    <span>微信</span>
+                    <span id="unread">(12)</span>
                 </div>
                 <div class="right">
                     <img src="./imgs/search.svg" alt="search">
-                    <img src="./imgs/add.svg" alt="add">
+                    <img src="./imgs/add.svg" alt="add" onclick="changePlusToolBoxStatus()">
                 </div>
             </div>
 
             <!-- 微信消息页面 -->
             <div id="msg" class="body">
-
                 <ul class="msg-list">
 
                     <li class="msg-slice">
                         <div class="avator">
                             <img src="./imgs/wxpub.png" alt="groups" class="avator">
-                            <div class="redot"></div>
+                            <!-- <div class="redot"></div> -->
                         </div>
 
                         <div class="info">
@@ -80,7 +106,7 @@
                     <li class="msg-slice">
                         <div class="avator">
                             <img src="./imgs/wxpubsafe.png" alt="groups" class="avator">
-                            <div class="redot"></div>
+                            <!-- <div class="redot"></div> -->
                         </div>
 
                         <div class="info">
@@ -96,7 +122,7 @@
 
                     <li class="msg-slice">
                         <div class="avator">
-                            <img src="./imgs/contact/bingbing.png" alt="groups" class="avator">
+                            <img src="./imgs/contact/bingbing.png" alt="groups">
                             <div class="redot"></div>
                         </div>
 
@@ -112,24 +138,24 @@
 
                     <li class="msg-slice">
                         <div class="avator">
-                            <img src="./imgs/msg/jackma.png" alt="jack ma" class="avator">
+                            <img src="./imgs/contact/pony.png" alt="pony ma">
                             <div class="redot"></div>
                         </div>
 
                         <div class="info">
-                            <span class="name">Jack Ma</span>
-                            <span class="abstract">阿里云栖大会请你来参加</span>
+                            <span class="name">Pony</span>
+                            <span class="abstract">有个需求要改</span>
                         </div>
 
                         <div class="time">
-                            <span>上午9:46</span>
-                            <img src="./imgs/msg/mute.svg" alt="mute">
+                            <span>昨天</span>
+                            <!-- <img src="./imgs/msg/mute.svg" alt="mute"> -->
                         </div>
                     </li>
 
                     <li class="msg-slice">
                         <div class="avator">
-                            <img src="./imgs/msg/jackma.png" alt="jack ma" class="avator">
+                            <img src="./imgs/msg/jackma.png" alt="jack ma">
                             <div class="redot"></div>
                         </div>
 
@@ -144,129 +170,14 @@
                         </div>
                     </li>
 
-                    <li class="msg-slice">
-                        <div class="avator">
-                            <img src="./imgs/msg/jackma.png" alt="jack ma" class="avator">
-                            <div class="redot"></div>
-                        </div>
 
-                        <div class="info">
-                            <span class="name">Jack Ma</span>
-                            <span class="abstract">阿里云栖大会请你来参加</span>
-                        </div>
 
-                        <div class="time">
-                            <span>上午9:46</span>
-                            <img src="./imgs/msg/mute.svg" alt="mute">
-                        </div>
-                    </li>
-
-                    <li class="msg-slice">
-                        <div class="avator">
-                            <img src="./imgs/msg/jackma.png" alt="jack ma" class="avator">
-                            <div class="redot"></div>
-                        </div>
-
-                        <div class="info">
-                            <span class="name">Jack Ma</span>
-                            <span class="abstract">阿里云栖大会请你来参加</span>
-                        </div>
-
-                        <div class="time">
-                            <span>上午9:46</span>
-                            <img src="./imgs/msg/mute.svg" alt="mute">
-                        </div>
-                    </li>
-
-                    <li class="msg-slice">
-                        <div class="avator">
-                            <img src="./imgs/msg/jackma.png" alt="jack ma" class="avator">
-                            <div class="redot"></div>
-                        </div>
-
-                        <div class="info">
-                            <span class="name">Jack Ma</span>
-                            <span class="abstract">阿里云栖大会请你来参加</span>
-                        </div>
-
-                        <div class="time">
-                            <span>上午9:46</span>
-                            <img src="./imgs/msg/mute.svg" alt="mute">
-                        </div>
-                    </li>
-
-                    <li class="msg-slice">
-                        <div class="avator">
-                            <img src="./imgs/msg/jackma.png" alt="jack ma" class="avator">
-                            <div class="redot"></div>
-                        </div>
-
-                        <div class="info">
-                            <span class="name">Jack Ma</span>
-                            <span class="abstract">阿里云栖大会请你来参加</span>
-                        </div>
-
-                        <div class="time">
-                            <span>上午9:46</span>
-                            <img src="./imgs/msg/mute.svg" alt="mute">
-                        </div>
-                    </li>
-
-                    <li class="msg-slice">
-                        <div class="avator">
-                            <img src="./imgs/msg/jackma.png" alt="jack ma" class="avator">
-                            <div class="redot"></div>
-                        </div>
-
-                        <div class="info">
-                            <span class="name">Jack Ma</span>
-                            <span class="abstract">阿里云栖大会请你来参加</span>
-                        </div>
-
-                        <div class="time">
-                            <span>上午9:46</span>
-                            <img src="./imgs/msg/mute.svg" alt="mute">
-                        </div>
-                    </li>
-
-                    <li class="msg-slice">
-                        <div class="avator">
-                            <img src="./imgs/msg/jackma.png" alt="jack ma" class="avator">
-                            <div class="redot"></div>
-                        </div>
-
-                        <div class="info">
-                            <span class="name">Jack Ma</span>
-                            <span class="abstract">阿里云栖大会请你来参加</span>
-                        </div>
-
-                        <div class="time">
-                            <span>上午9:46</span>
-                            <img src="./imgs/msg/mute.svg" alt="mute">
-                        </div>
-                    </li>
-
-                    <li class="msg-slice">
-                        <div class="avator">
-                            <img src="./imgs/msg/jackma.png" alt="jack ma" class="avator">
-                            <div class="redot"></div>
-                        </div>
-
-                        <div class="info">
-                            <span class="name">Jack Ma</span>
-                            <span class="abstract">阿里云栖大会请你来参加</span>
-                        </div>
-
-                        <div class="time">
-                            <span>上午9:46</span>
-                            <img src="./imgs/msg/mute.svg" alt="mute">
-                        </div>
-                    </li>
                 </ul>
             </div>
 
             <!-- 联系人页面 -->
             <div id="contact" class="body">
+
                 <ul class="contact-list fixed">
                     <li class="contact-slice">
                         <div class="avator"><img src="./imgs/contact/newfriend.png" alt="newfriend"></div>
@@ -296,7 +207,7 @@
                 <ul class="contact-list friends">
                     <li class="contact-slice">
                         <div class="avator"><img src="./imgs/contact/pony.png" alt="pony"></div>
-                        <div class="name"><span>Pony Ma</span></div>
+                        <div class="name"><span>Pony</span></div>
                     </li>
 
                     <li class="contact-slice">
@@ -330,7 +241,8 @@
 
             <!-- 发现页面 -->
             <div id="discovery" class="body">
-                <div class="dis-slice">
+
+                <div class="dis-slice" onclick="showMoments()">
                     <div class="logo"><img src="./imgs/discovery/moments.png" alt="moments"></div>
                     <div class="name">朋友圈</div>
                     <div class="pointer"><span> > </span></div>
@@ -385,6 +297,7 @@
                     <div class="name">小程序</div>
                     <div class="pointer"><span> > </span></div>
                 </div>
+
             </div>
 
             <!-- 我 页面 -->
@@ -484,7 +397,7 @@
                 <div class="navtag">
                     <div class="name-area">
                         <img src="./imgs/chat/back.svg" id="back-btn" alt="back-btn" onclick="hideChat()">
-                        <span>Adelle</span>
+                        <span>Pony</span>
                         <img src="./imgs/chat/Ear.svg" id="ear-logo" alt="hear-soundmsg">
                     </div>
                     <dir class="menu-btn">
@@ -495,37 +408,201 @@
                 <!-- 中栏 对话 -->
                 <div class="chat-content" id="chat-content">
 
-                    <div class="time-stamp">下午4:33</div>
+                    <div class="time-stamp">昨天 晚上11:33</div>
 
                     <div class="chat-slice receiver-slice">
-                        <img src="./imgs/contact/bingbing.png" alt="avator" class="avator">
-                        <div class="message">今天有时间吗?</div>
+                        <img src="./imgs/contact/pony.png" alt="avator" class="avator">
+                        <div class="message">睡了吗？</div>
                     </div>
 
                     <div class="chat-slice receiver-slice">
-                        <img src="./imgs/contact/bingbing.png" alt="avator" class="avator">
-                        <div class="message">晚上一起吃饭</div>
+                        <img src="./imgs/contact/pony.png" alt="avator" class="avator">
+                        <div class="message">有个需求要改</div>
                     </div>
-                    
+
                     <div class="chat-slice sender-slice">
-                        <div class="message">好的ok</div>
+                        <div class="message">？？？？</div>
                         <img src="./imgs/me/avator.png" alt="avator" class="avator">
                     </div>
 
-                    <div class="time-stamp">下午5:00</div>
+                    <div class="time-now time-stamp">下午 5:00</div>
 
                 </div>
 
                 <!-- 底栏 发送按钮和编辑框 -->
                 <div class="sender">
-                    <img src="./imgs/chat/voice.svg" id="voice" alt="voice">
+                    <img src="./imgs/chat/voice.svg" id="voice" alt="voice" onclick="showVoiceBtn()">
+                    <img src="./imgs/chat/keyboard.svg" id="kbd" alt="keyboard" style="display:none" onclick="showTextInput()">
                     <input type="text" id="text-input">
-                    <div class="voice-btn"></div>
+                    <div class="voice-btn" id="voice-btn" style="display:none">按住 说话</div>
                     <img src="./imgs/chat/emojis.svg" alt="emoji">
                     <img src="./imgs/chat/add-attach.svg" id="attach" alt="attachs">
                     <div class="send-btn" id="send" style="display:none;" onclick="sendMessage()">发送</div>
                 </div>
+
+                <div id="tool-pad" style="display:none">
+
+                    <div id="tool-page1" class="tool-page">
+                        <div class="button-wraper"><img src="./imgs/toolbox/相册.svg"> <span>相册</span></div>
+                        <div class="button-wraper"><img src="./imgs/toolbox/相机.svg"> <span>拍摄</span> </div>
+                        <div class="button-wraper"> <img src="./imgs/toolbox/语音通话.svg"> <span>视频通话</span> </div>
+                        <div class="button-wraper"> <img src="./imgs/toolbox/位置.svg"> <span>位置</span> </div>
+                        <div class="button-wraper"> <img src="./imgs/toolbox/红包.svg"> <span>红包</span> </div>
+                        <div class="button-wraper"> <img src="./imgs/toolbox/转账.svg"> </div>
+                        <div class="button-wraper"> </div>
+                        <div class="button-wraper"> </div>
+
+                    </div>
+                    <div id="tool-page2" class="tool-page">
+                        <div class="button-wraper"> </div>
+                        <div class="button-wraper"> </div>
+                        <div class="button-wraper"> </div>
+                    </div>
+
+                    <div class="pagedot">
+                        <span id="page1"></span>
+                        <span id="page2"></span>
+                    </div>
+                </div>
             </div>
+
+            <!-- 二级页面 - 朋友圈 -->
+            <div class="container second" id="moments">
+                <div class="moments-top">
+                    <img src="./imgs/chat/back.svg" id="moments-back" onclick="hideMoments()">
+                    <span id="moments-flag" style="display:none">朋友圈</span>
+                    <img src="./imgs/me/camera.svg">
+                </div>
+
+                <div class="moments-container">
+                    <div class="myzone">
+                        <div class="namelogo">
+                            <span>linking</span>
+                            <img src="./imgs/me/avator.png">
+                        </div>
+                    </div>
+                    <div class="sticky-container">
+
+                        <ul id="moments-slices">
+
+                            <li class="moment-slice">
+                                <div class="left-avator">
+                                    <!-- 朋友圈消息头像 -->
+                                    <img src="./imgs/moments/avator-paperweekly.jpg">
+                                </div>
+                                <div class="right-content">
+                                    <span class="wxname">PaperWeekly小助手</span>
+
+                                    <div class="slice-content">
+                                        <!-- 图片消息或文字链接消息 -->
+                                        <p class="text-content">#直播预告#
+                                            1月10日（周四）晚8点，平安人寿智能平台团队资深算法工程师姚晓远将在PaperWeekly直播间为您介绍对话生成模型的探析与创新，分享平安人寿基于业务场景的技术探索成果。</p>
+
+                                        <div class="hyperlink-content">
+                                            <img src="./imgs/moments/link-img1.png">
+                                            <p>直播 | 平安人寿资深算法工程师姚晓远：对话生成模型的探析与创新</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="bottom-land">
+                                        <span class="post-time">3小时前</span>
+                                        <img src="./imgs/moments/options.svg">
+                                    </div>
+
+                                    <div class="padding-line"></div>
+                                </div>
+                            </li>
+
+                            <li class="moment-slice">
+                                <div class="left-avator">
+                                    <!-- 朋友圈消息头像 -->
+                                    <img src="./imgs/moments/avator-intel.jpg">
+                                </div>
+                                <div class="right-content">
+                                    <span class="wxname">英特尔中国</span>
+
+                                    <div class="slice-content">
+                                        <!-- 图片消息或文字链接消息 -->
+                                        <p class="text-content">回顾2019CES英特尔科技盛宴</p>
+
+                                        <div class="hyperlink-content">
+                                            <img src="./imgs/moments/link-img3.png">
+                                            <p>#英特尔CES快讯#英特尔CES新闻发布会刚刚结束，戳链接回顾精彩现场</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="bottom-land">
+                                        <span class="post-time">8小时 微博</span>
+                                        <img src="./imgs/moments/options.svg">
+                                    </div>
+
+                                    <div class="padding-line"></div>
+                                </div>
+                            </li>
+
+                            <li class="moment-slice">
+                                <div class="left-avator">
+                                    <!-- 朋友圈消息头像 -->
+                                    <img src="./imgs/moments/avator-qbit.jpg">
+                                </div>
+                                <div class="right-content">
+                                    <span class="wxname">量子位小助手</span>
+
+                                    <div class="slice-content">
+                                        <!-- 图片消息或文字链接消息 -->
+                                        <p class="text-content">刚刚，GitHub有了重大更新！此前需要付费使用私有代码库，现在可以免费使用了，企业和组织也有了更简单统一的产品GitHub
+                                            Enterprise。万千程序员大呼：赚到了赚到了！</p>
+
+                                        <div class="hyperlink-content">
+                                            <img src="./imgs/moments/link-img4.png">
+                                            <p>GitHub重磅更新！私有代码库从此免费，开发者齐夸微软送福利</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="bottom-land">
+                                        <span class="post-time">11小时前</span>
+                                        <img src="./imgs/moments/options.svg">
+                                    </div>
+
+                                    <div class="padding-line"></div>
+                                </div>
+                            </li>
+
+                            <li class="moment-slice">
+                                <div class="left-avator">
+                                    <!-- 朋友圈消息头像 -->
+                                    <img src="./imgs/moments/avator-paperweekly.jpg">
+                                </div>
+                                <div class="right-content">
+                                    <span class="wxname">PaperWeekly小助手</span>
+
+                                    <div class="slice-content">
+                                        <!-- 图片消息或文字链接消息 -->
+                                        <p class="text-content">本文为AI Challenger 2018全球挑战赛—英中机器翻译项目，冠军队伍技术和经验分享。</p>
+
+                                        <div class="hyperlink-content">
+                                            <img src="./imgs/moments/link-img2.png">
+                                            <p>AI Challenger 2018 机器翻译参赛总结</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="bottom-land">
+                                        <span class="post-time">昨天</span>
+                                        <img src="./imgs/moments/options.svg">
+                                    </div>
+
+                                    <div class="padding-line"></div>
+                                </div>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                </div>
+            </div>
+
         </div>
 
     </div>
@@ -552,9 +629,17 @@
         // 发送按钮的显示与隐藏
         var textinput = document.getElementById('text-input');
         textinput.addEventListener('input', changeSendBtnStatus);
-        textinput.addEventListener('keypress',keyPressed); // 回车发送消息
+        textinput.addEventListener('keypress', keyPressed); // 回车发送消息
 
+        // 消息页面备用对象
+        var kbd = document.getElementById('kbd');
+        var voice = document.getElementById('voice');
+        var voice_btn = document.getElementById('voice-btn');
+        //更新时间
+        updateTime();
 
+        // 滚动事件
+        document.getElementsByClassName("moments-container")[0].onscroll = handleMomentsScroll;
     </script>
 </body>
 
