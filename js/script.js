@@ -7,7 +7,7 @@ function switchPage(displayname) {
     console.log(selected_btn);
     var elem = document.getElementById("btn_" + displayname);
 
-    if(elem == selected_btn) return;
+    if (elem == selected_btn) return;
 
     elem.className += " btn-selected";
     selected_btn.className = "button";
@@ -33,10 +33,10 @@ function switchPage(displayname) {
 
     // 页面标题
     var namesmap = {
-        "msg":"微信",
-        "contact":"通讯录",
-        "discovery":"发现",
-        "me":"微信"
+        "msg": "微信",
+        "contact": "通讯录",
+        "discovery": "发现",
+        "me": "微信"
     }
     document.getElementById('header')
         .children[0].children[0].textContent = namesmap[displayname];
@@ -156,20 +156,21 @@ function showVoiceBtn() {
 // 更新通知栏和聊天窗口最新时间
 function updateTime() {
     var timetags = document.getElementsByClassName("time-now");
-    setInterval(()=>{
+    setInterval(() => {
         var now = new Date();
-        var shorttime = now.toLocaleTimeString().slice(2,7);
-        var longtime = now.toLocaleTimeString().slice(0,7);
+        var endidx = now.toLocaleTimeString().length - 3;
+        var shorttime = now.toLocaleTimeString().slice(2, endidx);
+        var longtime = now.toLocaleTimeString().slice(0, endidx);
         timetags[0].textContent = shorttime;
         timetags[1].textContent = longtime;
-    },500)
+    }, 500)
 }
 
 function changePlusToolBoxStatus() {
     var box = document.getElementById('plus-tool');
-    if(box.style.display == "none"){
+    if (box.style.display == "none") {
         box.style.display = "flex";
-    }else {
+    } else {
         box.style.display = "none";
     }
 }
@@ -178,17 +179,23 @@ function changePlusToolBoxStatus() {
 
 
 function claculateAlpha(height) {
-    // if(height < 200) return 1;
-    var alpha = 0.3 + ( (height - 200) / (240 - 200) ) * (1.0-0.3);
-    console.log("calculated aplha: "+alpha);
-    return alpha;
+    if (height < 200) {
+        return 0.1;
+    } else if (height >= 200 && height < 240) {
+        var alpha = 0.3 + ((height - 200) / (240 - 200)) * (1.0 - 0.3);
+        console.log("calculated aplha: " + alpha);
+        return alpha;
+    } else {
+        return 1;
+    }
+
 }
 
 function changeMomentsFlagStatus(targetStatus) {
     var momentsflag = document.getElementById('moments-flag');
-    if(targetStatus == "hide") {
+    if (targetStatus == "hide") {
         momentsflag.style.display = "none";
-    }else if(targetStatus == "show"){
+    } else if (targetStatus == "show") {
         momentsflag.style.display = "flex";
 
     }
@@ -197,14 +204,14 @@ function changeMomentsFlagStatus(targetStatus) {
 function handleMomentsScroll(e) {
     var moments = e.target;
     var momtop = document.getElementsByClassName("moments-top")[0];
-    if(moments.scrollTop < 190){ //头部透明并隐藏文字
+    if (moments.scrollTop < 190) { //头部透明并隐藏文字
         changeMomentsFlagStatus("hide");
         momtop.style.backgroundColor = "";
-    }else if(moments.scrollTop > 190 && moments.scrollTop < 240){
+    } else if (moments.scrollTop > 190 && moments.scrollTop < 240) {
         changeMomentsFlagStatus("show");
         var top = moments.scrollTop;
-        console.log("top:"+top);
-        momtop.style.backgroundColor = "rgba(247,247,247,"+ claculateAlpha(top) +")";
+        console.log("top:" + top);
+        momtop.style.backgroundColor = "rgba(247,247,247," + claculateAlpha(top) + ")";
     }
 }
 

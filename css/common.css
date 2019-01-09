@@ -5,6 +5,7 @@
     font-family: 微软雅黑, sans-serif;
 }
 
+/* 隐藏所有滚动条 */
 *::-webkit-scrollbar {
     display: none;
 }
